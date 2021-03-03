@@ -16,7 +16,7 @@ module.exports = function toReadable (number) {
     }         
     
     if (number < 1000) {          // for numbers from 100 to 999
-        return toReadable[Math.floor(number / 100)] + ' hundred' + (number % 100 === 0 ? '' : ' ' + toReadable(number % 100));
+        return toReadable(Math.floor(number / 100)) + ' hundred' + (number % 100 === 0 ? '' : ' ' + toReadable(number % 100));
     } 
 
     if (number < 1000000) {       // for numbers from 1.000 to 999.999
